@@ -26,7 +26,6 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
       - name: Setup JDK
         uses: actions/setup-java@v3.4.1
         with:
