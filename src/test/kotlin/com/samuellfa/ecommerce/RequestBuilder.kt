@@ -1,0 +1,10 @@
+package com.samuellfa.ecommerce
+
+import org.springframework.http.MediaType
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+
+class RequestBuilder {
+
+    fun post(url: String) = MockMvcRequestBuilders.post(url)
+            .contentType(MediaType.APPLICATION_JSON)
+}

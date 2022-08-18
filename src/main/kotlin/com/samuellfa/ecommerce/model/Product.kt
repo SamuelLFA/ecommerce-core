@@ -13,6 +13,6 @@ import javax.persistence.Table
 data class Product (
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: UUID?,
-    val description: String,
-    val value: BigDecimal
+    val info: String,
+    val price: BigDecimal
 )

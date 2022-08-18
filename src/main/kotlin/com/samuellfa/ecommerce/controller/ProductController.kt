@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("product")
+@RequestMapping("products")
 class ProductController(private val repository: ProductRepository) {
 
     @PostMapping

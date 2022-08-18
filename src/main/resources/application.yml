@@ -18,7 +18,7 @@ spring:
         generate-ddl: false
     # Flyway
     flyway:
-        enable: true
+        enabled: true
     # Server configuration
     server:
         port: 8080 #set your port

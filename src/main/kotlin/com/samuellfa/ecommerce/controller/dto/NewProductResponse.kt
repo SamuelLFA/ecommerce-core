@@ -9,10 +9,10 @@ import javax.validation.constraints.NotBlank
 
 data class NewProductResponse (
     @NotBlank @Max(255)
-    val description: String,
+    val info: String,
     @DecimalMin(value = "0.0", inclusive = true)
     @Digits(integer=9, fraction=2)
-    val value: BigDecimal
+    val price: BigDecimal
 ) {
-    constructor(product: Product) : this(product.description, product.value)
+    constructor(product: Product) : this(product.info, product.price)
 }
