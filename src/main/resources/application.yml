@@ -1,0 +1,24 @@
+spring:
+    # Database
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/ecommerce
+        username: root
+        password: root
+        hikari:
+            schema: ecommerce
+    # JPA properties
+    jpa:
+        hibernate:
+            ddl-auto: none # When you launch the application for the first time - switch "none" at "create"
+        show-sql: true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        open-in-view: false
+        generate-ddl: false
+    # Flyway
+    flyway:
+        enable: true
+    # Server configuration
+    server:
+        port: 8080 #set your port
