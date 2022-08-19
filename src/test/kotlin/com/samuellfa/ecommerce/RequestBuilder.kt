@@ -7,4 +7,7 @@ class RequestBuilder {
 
     fun post(url: String) = MockMvcRequestBuilders.post(url)
             .contentType(MediaType.APPLICATION_JSON)
+
+    fun get(url: String) = MockMvcRequestBuilders.get(url)
+        .contentType(MediaType.APPLICATION_JSON)
 }
