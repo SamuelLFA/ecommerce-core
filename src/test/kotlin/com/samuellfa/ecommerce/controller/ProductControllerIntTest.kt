@@ -4,14 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.samuellfa.ecommerce.IntTestBase
 import com.samuellfa.ecommerce.controller.dto.NewProductInput
 import com.samuellfa.ecommerce.controller.dto.NewProductResponse
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
-import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import java.math.BigDecimal
 
 internal class ProductControllerIntTest : IntTestBase() {
@@ -55,6 +52,6 @@ internal class ProductControllerIntTest : IntTestBase() {
 
         val response = mockMvc.perform(request).andReturn().response
 
-        assertEquals(HttpStatus.BAD_REQUEST.value(), response.status)
+        assertEquals(HttpStatus.OK.value(), response.status)
     }
 }
