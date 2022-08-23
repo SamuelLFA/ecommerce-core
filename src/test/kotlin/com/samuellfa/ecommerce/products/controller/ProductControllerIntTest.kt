@@ -1,9 +1,9 @@
-package com.samuellfa.ecommerce.controller
+package com.samuellfa.ecommerce.products.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.samuellfa.ecommerce.IntTestBase
-import com.samuellfa.ecommerce.controller.dto.NewProductInput
-import com.samuellfa.ecommerce.controller.dto.NewProductResponse
+import com.samuellfa.ecommerce.products.IntTestBase
+import com.samuellfa.ecommerce.products.controller.dto.NewProductInput
+import com.samuellfa.ecommerce.products.controller.dto.NewProductResponse
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test

@@ -1,13 +1,14 @@
-package com.samuellfa.ecommerce.controller.dto
+package com.samuellfa.ecommerce.products.controller.dto
 
-import com.samuellfa.ecommerce.model.Product
+import com.samuellfa.ecommerce.products.model.Product
 import java.math.BigDecimal
 import javax.validation.constraints.DecimalMin
 import javax.validation.constraints.Digits
+import javax.validation.constraints.Max
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Size
 
-data class NewProductResponse (
+data class GetProductResponse (
     @field:NotBlank
     @field:Size(min = 1, max = 255)
     val info: String,

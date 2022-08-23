@@ -1,4 +1,4 @@
-package com.samuellfa.ecommerce.model
+package com.samuellfa.ecommerce.products.model
 
 import java.math.BigDecimal
 import java.util.UUID

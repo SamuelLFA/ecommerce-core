@@ -1,9 +1,9 @@
-package com.samuellfa.ecommerce.controller
+package com.samuellfa.ecommerce.products.controller
 
-import com.samuellfa.ecommerce.controller.dto.GetProductResponse
-import com.samuellfa.ecommerce.controller.dto.NewProductInput
-import com.samuellfa.ecommerce.controller.dto.NewProductResponse
-import com.samuellfa.ecommerce.repository.ProductRepository
+import com.samuellfa.ecommerce.products.controller.dto.GetProductResponse
+import com.samuellfa.ecommerce.products.controller.dto.NewProductInput
+import com.samuellfa.ecommerce.products.controller.dto.NewProductResponse
+import com.samuellfa.ecommerce.products.repository.ProductRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping

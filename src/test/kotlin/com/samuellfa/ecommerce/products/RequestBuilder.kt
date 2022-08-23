@@ -1,4 +1,4 @@
-package com.samuellfa.ecommerce
+package com.samuellfa.ecommerce.products
 
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
