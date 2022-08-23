@@ -1,13 +1,13 @@
-package com.samuellfa.ecommerce.controller.dto
+package com.samuellfa.ecommerce.products.controller.dto
 
-import com.samuellfa.ecommerce.model.Product
+import com.samuellfa.ecommerce.products.model.Product
 import java.math.BigDecimal
 import javax.validation.constraints.DecimalMin
 import javax.validation.constraints.Digits
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Size
 
-data class NewProductInput (
+data class NewProductResponse (
     @field:NotBlank
     @field:Size(min = 1, max = 255)
     val info: String,
@@ -15,9 +15,5 @@ data class NewProductInput (
     @field:Digits(integer=9, fraction=2)
     val price: BigDecimal
 ) {
-    fun toModel() = Product(
-        id = null,
-        info = info,
-        price = price
-    )
+    constructor(product: Product) : this(product.info, product.price)
 }

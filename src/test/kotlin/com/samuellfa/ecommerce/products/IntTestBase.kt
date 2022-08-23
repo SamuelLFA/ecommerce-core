@@ -1,4 +1,4 @@
-package com.samuellfa.ecommerce
+package com.samuellfa.ecommerce.products
 
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
