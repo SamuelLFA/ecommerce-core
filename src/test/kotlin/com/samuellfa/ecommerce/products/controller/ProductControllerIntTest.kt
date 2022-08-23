@@ -25,7 +25,7 @@ internal class ProductControllerIntTest : IntTestBase() {
     inner class `save products` {
         @Test
         fun `when input is valid should return product created`() {
-            val input = NewProductInput("product", BigDecimal.valueOf(10.50))
+            val input = NewProductInput("product", BigDecimal.valueOf(10.50), 15)
             val inputJSON = mapper.writeValueAsString(input)
             val request = requestBuilder.post("/products").content(inputJSON)
 
@@ -39,7 +39,7 @@ internal class ProductControllerIntTest : IntTestBase() {
 
         @Test
         fun `when info is empty should return 400`() {
-            val input = NewProductInput("", BigDecimal.valueOf(10.50))
+            val input = NewProductInput("", BigDecimal.valueOf(10.50), 15)
             val inputJSON = mapper.writeValueAsString(input)
             val request = requestBuilder.post("/products").content(inputJSON)
 
@@ -50,7 +50,18 @@ internal class ProductControllerIntTest : IntTestBase() {
 
         @Test
         fun `when price is negative should return 400`() {
-            val input = NewProductInput("product", BigDecimal.valueOf(-10.50))
+            val input = NewProductInput("product", BigDecimal.valueOf(-10.50), 15)
+            val inputJSON = mapper.writeValueAsString(input)
+            val request = requestBuilder.post("/products").content(inputJSON)
+
+            val response = mockMvc.perform(request).andReturn().response
+
+            assertEquals(HttpStatus.BAD_REQUEST.value(), response.status)
+        }
+
+        @Test
+        fun `when quantity is negative should return 400`() {
+            val input = NewProductInput("product", BigDecimal.valueOf(10.50), -15)
             val inputJSON = mapper.writeValueAsString(input)
             val request = requestBuilder.post("/products").content(inputJSON)
 
