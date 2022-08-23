@@ -14,5 +14,6 @@ data class Product (
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: UUID?,
     val info: String,
-    val price: BigDecimal
+    val price: BigDecimal,
+    val quantity: Int
 )
